@@ -16,16 +16,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\CommnetsController;
 
-// Route::get('/', [PostsController,'index'])->name('top');
+Route::get('/', [PostsController,'index'])->name('top');
 
-Route::get('/', 'App\Http\Controllers\PostsController@index');
+// Route::get('/', 'App\Http\Controllers\PostsController@index');
 
-Route::resource('posts', 'PostsController', ['only' => ['create', 'store']]);
+// Route::resource('comments', 'CommentsController', ['only' => ['store']]);
 
-Route::resource('posts', 'PostsController', ['only' => ['create', 'store', 'show']]);
+// Route::resource('posts', 'PostsController', ['only' => ['create', 'store', 'show', 'edit', 'update', 'destroy']]);
 
-Route::resource('comments', 'CommentsController', ['only' => ['store']]);
-
-Route::resource('posts', 'PostsController', ['only' => ['create', 'store', 'show', 'edit', 'update']]);
-
-Route::resource('posts', 'PostsController', ['only' => ['create', 'store', 'show', 'edit', 'update', 'destroy']]);
+Route::resource('posts', 'PostsController');
