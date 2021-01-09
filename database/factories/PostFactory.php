@@ -2,12 +2,19 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Post::class, function (Faker $faker) {
+class PostsFactory extends Factory
+{
+    protected $model = Posts::class;
+
+    public function definition()
+    {
     return [
         'title' => '投稿のタイトル',
         'body' => "本文です。aaaaaaaaa。\n bbbbbbbbbbbb",
-    ];
-});
+      ];
+}
+}
+
 
 
 

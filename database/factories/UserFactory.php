@@ -20,8 +20,11 @@ class UserFactory extends Factory
      *
      * @return array
      */
-    public function definition()
-    {
+
+    
+       
+        public function definition()
+        {
         return [
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
@@ -31,3 +34,15 @@ class UserFactory extends Factory
         ];
     }
 }
+
+// class CommentFactory extends Factory
+// {
+//     protected $model = Comment::class;
+
+//     public function definition()
+//     {
+//     return [
+//         'body' => "コメントです。commentcomment。\n コメントコメント",
+//     ];
+// }
+// }

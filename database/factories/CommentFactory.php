@@ -2,8 +2,14 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Comment::class, function (Faker $faker) {
+class CommentFactory extends Factory
+{
+    protected $model = Comment::class;
+
+    public function definition()
+    {
     return [
         'body' => "コメントです。commentcomment。\n コメントコメント",
     ];
-});
+}
+}
